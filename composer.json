@@ -1,0 +1,29 @@
+{
+    "name": "openlib/functions",
+    "description": "常用函数集",
+    "keywords": ["工具","函数库"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ken.Zhang",
+            "email": "kenphp@yeah.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "version": "v1.0.0",
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "files": [
+            "src/object.php",
+            "src/exception.php",
+            "src/time.php",
+            "src/logger.php"
+        ]
+    }
+}
