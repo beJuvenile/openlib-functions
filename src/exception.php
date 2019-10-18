@@ -34,6 +34,6 @@ if (!function_exists('exception_to_string')) {
      */
     function exception_to_string($e)
     {
-        return sprintf("Info: %s File: %s Line: %d", $e->getMessage(), $e->getFile(), $e->getLine());
+        return sprintf("Info: %s File: %s Line: %d\r\n", $e->getMessage(), $e->getFile(), $e->getLine());
     }
 }
