@@ -92,6 +92,7 @@ if (!function_exists('time_area')) {
                 ];
                 break;
             default:
+                // 今天开始到现在的时间
                 $timeArea = [
                     date('Y-m-d 00:00:00', $time),
                     date('Y-m-d H:i:s', $time),
@@ -100,5 +101,22 @@ if (!function_exists('time_area')) {
         }
 
         return $timeArea;
+    }
+}
+
+if (!function_exists('last_hour_area')) {
+    /**
+     * 最近n小时时间范围
+     *
+     * @param int $hour
+     * @return array
+     */
+    function last_hour_area($hour=1)
+    {
+        $time = time();
+        return [
+            date('Y-m-d H:i:s', $time-3600*$hour),
+            date('Y-m-d H:i:s', $time),
+        ];
     }
 }
